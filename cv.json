@@ -39,6 +39,7 @@
       "position": "Open Source Contribution",
       "location_type": "",
       "location": "",
+      "url": "https://github.com/gomods/athens/pull/2093",
       "startDate": "2026-02-28",
       "endDate": "2026-03-04",
       "summary": "Identified an observability gap: Athens exposed HTTP-level OpenCensus metrics but lacked proxy-layer cache and upstream fetch metrics, limiting operator visibility into cache effectiveness and upstream reliability.",
