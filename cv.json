@@ -50,7 +50,8 @@
         "Designed REST API workflows and Redux state management, cutting client-side response latency by about 15% and ensuring responsive UIs across all viewports using SCSS and Tailwind CSS."
       ],
       "achievements": [
-        "Resolved 50+ bugs and Git merge conflicts, improving stability across CI/CD build pipelines using structured branching workflows. Collaborated in Agile/Scrum sprints with design and backend teams to ship 6+ production features in TypeScript to 1K+ active users."
+        "Resolved 50+ bugs and Git merge conflicts, improving stability across CI/CD build pipelines using structured branching workflows.",
+        "Collaborated in Agile/Scrum sprints with design and backend teams to ship 6+ production features in TypeScript to 1K+ active users."
       ],
       "skills": ["Next", "React", "Tailwind", "Git", "Scss"]
     },
