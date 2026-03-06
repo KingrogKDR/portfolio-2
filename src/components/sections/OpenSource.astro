@@ -1,6 +1,6 @@
 ---
 import Section from "../Section.astro"
-import { work } from "@cv"
+import { opensource } from "@cv"
 
 import HTML from "@/icons/html.astro"
 import CSS from "@/icons/css.astro"
@@ -45,28 +45,17 @@ const SKILLS_ICONS: Record<string, any> = {
   Flask,
   Prometheus
 }
-const formatDate = (date?: string | null) => {
-  if (!date) return "Present"
-  return new Date(date).toLocaleDateString("en-US", {
-    month: "short",
-    year: "numeric"
-  })
-}
 
 ---
-<Section className={Astro.props.className} title="Experience">
+<Section className={Astro.props.className} title="Open-Source">
   <ul class="flex flex-col">
-    {work.map(({ name, startDate, endDate, position, summary, responsibilities, achievements, url, skills, location, location_type }) => {
-      const startFormatted = formatDate(startDate)
-      const endFormatted = formatDate(endDate)
+    {opensource.map(({ name, position, summary, pr_no, contributions, url, skills }) => {
 
       return (
         <li class="relative print:py-2">
           <div class="group relative grid pb-1 print:pb-0 transition-all print:grid-cols-1 print:gap-1 sm:grid-cols-12 sm:gap-8 md:gap-6 lg:hover:opacity-100! ">
-            <header class="relative mt-1 text-xs font-semibold sm:col-span-2 whitespace-nowrap">
-              <time datetime={startDate} data-title={startDate}>{startFormatted}</time>
-              <span> - </span>
-              <time datetime={endDate} data-title={endDate}>{endFormatted}</time>
+            <header class="relative mt-1 text-xs font-semibold sm:col-span-2">
+              <span>PR - #{pr_no}</span>
             </header>
             <div class="relative flex flex-col pb-6 print:pb-0 before:-ml-6 sm:col-span-10 before:w-px print:before:hidden before:absolute before:bg-skin-muted before:opacity-30 before:h-full before:mt-2">
             <div class="absolute w-2 h-2 bg-skin-muted rounded-full mt-2 -translate-x-[1.71rem] ring print:hidden ring-skin-fill"></div>
@@ -88,11 +77,6 @@ const formatDate = (date?: string | null) => {
                   </span>
                 </div>
               </h3>
-              {(location || location_type) && (
-                <div class="text-xs text-skin-muted">
-                  {location} {location && location_type && '-'} {location_type}
-                </div>
-              )}
               <div class="mt-4  print:gap-0 flex flex-col gap-4 print:text-xs text-sm" x-data="{ expanded: false }">
                 {summary && (
                   <div class="flex flex-col gap-1">
@@ -109,25 +93,15 @@ const formatDate = (date?: string | null) => {
                   </div>
                 )}
 
-                {(responsibilities || achievements) &&  (
-                <div class="md:after:from-skin-fill dark:md:after:to-skin-fill/0  flex relative flex-col max-sm:!h-auto print:!h-auto gap-4 print:gap-2 md:after:bg-gradient-to-t md:after:absolute md:after:bottom-0 md:after:w-full print:after:hidden md:after:h-12 md:after:content-[''] " :class="expanded ? 'after:hidden' : ''" x-show="expanded" x-collapse.min.50px>
-                {responsibilities && (
-                  <div class="flex flex-col gap-1">
-                    <h4>Responsibilities:</h4>
-                    <ul class="text-skin-muted [&>li]:ml-4 flex list-disc flex-col gap-2">
-                      {responsibilities.map(responsibility => (
-                        <li>{responsibility}</li>
-                      ))}
-                    </ul>
-                  </div>
-                )}
+                {contributions &&  (
+                <div class="md:after:from-skin-fill dark:md:after:to-skin-fill/0  flex relative flex-col max-sm:h-auto! print:h-auto! gap-4 print:gap-2 md:after:bg-linear-to-t md:after:absolute md:after:bottom-0 md:after:w-full print:after:hidden md:after:h-12 md:after:content-[''] " :class="expanded ? 'after:hidden' : ''" x-show="expanded" x-collapse.min.50px>
 
-                {achievements && (
+                {contributions && (
                   <div class="flex flex-col gap-1">
-                    <h4>Achievements:</h4>
+                    <h4>Contributions:</h4>
                     <ul class="text-skin-muted [&>li]:ml-4 flex list-disc flex-col gap-2">
-                      {achievements.map(achievement => (
-                        <li>{achievement}</li>
+                      {contributions.map(contribution => (
+                        <li>{contribution}</li>
                       ))}
                     </ul>
                   </div>
