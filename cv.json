@@ -87,6 +87,19 @@
         "Designed with low-cardinality labels and zero API/storage changes; integrates with existing Prometheus, Datadog, and Stackdriver exporters. Added unit tests for all three metric paths"
       ],
       "skills": ["Go", "Prometheus"]
+    },
+    {
+      "name": "go-swagger",
+      "position": "Open Source Contribution",
+      "url": "https://github.com/go-swagger/go-swagger/pull/3288",
+      "pr_no": "3288",
+      "summary": "Identified a runtime panic in the schema parser where comment-based enum declarations assumed a non-empty type slice, causing crashes during spec generation when the type was uninitialized.",
+      "contributions": [
+        "Fixed a slice out-of-range panic by guarding access to sv.current.Type[0] and safely handling cases where the schema type was not yet initialized.",
+        "Preserved existing parsing behavior by passing an empty type to enum parsing logic when unavailable, ensuring backward compatibility.",
+        "Added a regression test covering the full Run() path with a swagger:model struct using comment-based enum declarations, reproducing the crash before the fix and validating correctness after."
+      ],
+      "skills": ["Go"]
     }
   ],
   "education": [
