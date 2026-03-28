@@ -227,12 +227,15 @@
   ],
   "projects": [
     {
-      "name": "Dev_Search (in development)",
+      "name": "Craw",
       "isActive": false,
-      "description": "A developer-focused search engine",
+      "description": "A developer-focused custom high-performance web crawler in Go.",
       "highlights": [
-        "Building a developer-focused search engine in Go targeting documentation sites, GitHub repositories, and Wikipedia; designed for high-relevance technical content discovery.",
-        "Architecting a distributed scraping pipeline with a Redis task queues for decoupled crawl job distribution; goroutines and channels for concurrent worker pools with backpressure."
+        "Built a high-performance single-node web crawler in Go with a distributed-style architecture using Redis-backed queues, enabling concurrent crawling and parsing while maintaining backpressure control.",
+        "Designed a full crawling pipeline including URL frontier (scheduler with retry + visibility timeout), fetcher with rate limiting and robots.txt compliance, parser for HTML/Markdown extraction, and storage layer using JSON, Redis, and MinIO.",
+        "Implemented advanced deduplication using URL normalization + hashing for URL-level dedup and Simhash with Hamming distance for near-duplicate content detection.",
+        "Achieved ~3.16 pages/sec crawl rate over ~3+ hours, processing ~9.8GB of data with ~30% duplicate filtering, while tracking metrics like latency, throughput, and memory usage.",
+        "Laid foundation for a developer-centric search engine by structuring crawled data into indexable documents for future search and ranking systems."
       ],
       "url": "",
       "github": "https://github.com/KingrogKDR/Dev_Search"
