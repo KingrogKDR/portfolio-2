@@ -44,11 +44,12 @@
       "endDate": "2025-07-31",
       "highlights": ["Improved website performance by optimizing code"],
       "responsibilities": [
-        "Built and optimized production-grade UIs using Next.js, Redux, improving load time by about 20% through code-splitting, memoization and SSR tuning.",
-        "Integrated automated mailing workflows using Nodemailer and Node.js, reducing manual overhead in onboarding flows and improving user activation roles.",
-        "Designed REST API workflows and Redux state management, cutting client-side response latency by about 15% and ensuring responsive UIs across all viewports using SCSS and Tailwind CSS."
+        "Built an event-driven email automation service in Node.js handling onboarding workflows, eliminating manual steps in the activation pipeline and measurably improving activation rates.",
+        "Designed REST API workflows and server-side state architecture, reducing client response latency by ~15% through improved request handling and payload structure.",
+        "Optimized production frontend performance via code-splitting, memoization, and SSR tuning, improving page load times by ~20%.",
+        "Resolved 50+ bugs across frontend and backend codebases, improving CI/CD pipeline stability and reducing build failures in production."
       ],
-      "skills": ["Next", "React", "Tailwind", "Git", "Scss"]
+      "skills": ["Typescript", "Javascript", "Git"]
     }
   ],
   "opensource": [
@@ -103,29 +104,9 @@
       "keywords": ["Backend", "Fullstack"]
     },
     {
-      "name": "HTML",
-      "level": "Intermediate",
-      "keywords": ["Web Development", "Frontend"]
-    },
-    {
-      "name": "CSS",
-      "level": "Intermediate",
-      "keywords": ["Web Development", "Frontend", "Responsive Design"]
-    },
-    {
       "name": "JavaScript",
       "level": "Intermediate",
       "keywords": ["Web Development", "Frontend", "Backend", "Fullstack"]
-    },
-    {
-      "name": "Tailwind",
-      "level": "Intermediate",
-      "keywords": [
-        "Web Development",
-        "Frontend",
-        "CSS Framework",
-        "Responsive Design"
-      ]
     },
     {
       "name": "TypeScript",
@@ -158,22 +139,6 @@
       "keywords": ["Version Control", "Collaboration", "Source Code", "Git"]
     },
     {
-      "name": "Next.js",
-      "level": "Beginner",
-      "keywords": [
-        "Web Development",
-        "Frontend",
-        "React Framework",
-        "SSR",
-        "Static Generation"
-      ]
-    },
-    {
-      "name": "React",
-      "level": "Intermediate",
-      "keywords": ["Web Development", "Frontend", "JavaScript Library", "UI"]
-    },
-    {
       "name": "Prometheus",
       "level": "Beginner",
       "keywords": ["Metrics", "Observability", "Backend"]
@@ -183,10 +148,6 @@
     {
       "language": "English",
       "fluency": "Native speaker"
-    },
-    {
-      "language": "Spanish",
-      "fluency": "Intermediate"
     }
   ],
   "interests": [
@@ -202,7 +163,7 @@
       "isActive": false,
       "description": "A developer-focused custom high-performance web crawler in Go.",
       "highlights": [
-        "Built a high-performance single-node web crawler in Go with a distributed-style architecture using Redis-backed queues, enabling concurrent crawling and parsing while maintaining backpressure control.",
+        "Built a production-grade web crawler in Go with distributed-system design patterns — Redis-backed crawl frontier, concurrent worker pipelines, and SimHash deduplication — achieving 3.16 pages/sec sustained over 3+ hours.",
         "Designed a full crawling pipeline including URL frontier (scheduler with retry + visibility timeout), fetcher with rate limiting and robots.txt compliance, parser for HTML/Markdown extraction, and storage layer using JSON, Redis, and MinIO."
       ],
       "url": "",
@@ -217,23 +178,6 @@
         "Implemented consent enforcement and access controlsing Prisma ORM with PostgreSQL, JWT auth, role-based authorization, and audit-logging middleware to prevent unauthorized cross-tenant access."
       ],
       "github": "https://github.com/laatu08/cyberhack"
-    },
-    {
-      "name": "StoreDoc",
-      "isActive": true,
-      "description": "A secure File Management System",
-      "highlights": [
-        "Built a cloud file management system in Next.js and Appwrite with OTP-based email authentication, real-time storage analytics (type breakdown, usage trends), and CI-integrated deployment on Vercel."
-      ],
-      "url": "https://store-doc-one.vercel.app",
-      "github": "https://github.com/KingrogKDR/storeDoc"
-    },
-    {
-      "name": "Http-Server",
-      "isActive": false,
-      "description": "A simple HTTP server written in Go, designed to handle basic web requests and responses. This server is lightweight, easy to set up, and perfect for small projects or learning purposes.",
-      "highlights": [],
-      "github": "https://github.com/KingrogKDR/my-http-server"
     }
   ]
 }
